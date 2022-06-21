@@ -23,14 +23,14 @@ print(wv.most_similar_cosmul('안압'))
 ```
 
 ### Embed Sentence
-사전학습 말뭉치를 형태소 분석기를 이용해 토큰화했기 때문에, 사용 시에도 반드시 형태소 분석기로 문장을 토큰화를 진행하셔야 합니다.
+사전학습 말뭉치를 형태소 분석기를 이용해 토큰화했기 때문에, 사용 시에도 반드시 형태소 분석기로 문장을 토큰화를 진행하셔야 합니다. 사전학습 시 KoNLPy의 MeCab을 사용했으므로 최적의 성능을 위해서는 MeCab 사용을 권장합니다.
 
 ```python
-from konlpy.tag import Kkma
+from konlpy.tag import Mecab
 import numpy as np
 
-kkma = Kkma()
-tokens = kkma.morphs('right clavicular head가 돌출되어 있고 세게 만지면 아프다.')
+mecab = Mecab()
+tokens = mecab.morphs('right clavicular head가 돌출되어 있고 세게 만지면 아프다.')
 print(tokens)
 ```
 ```
