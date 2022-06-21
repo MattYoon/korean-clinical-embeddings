@@ -14,7 +14,6 @@ Gensim의 KeyedVectors API를 사용했습니다. 추가적인 사용법은 [공
 ### Load Model
 ```python
 from gensim.models import KeyedVectors
-import numpy as np
 
 wv = KeyedVectors.load('kumed-w2v-300.model')
 print(wv.most_similar_cosmul('안압'))
@@ -28,6 +27,7 @@ print(wv.most_similar_cosmul('안압'))
 
 ```python
 from konlpy.tag import Mecab
+import numpy as np
 
 mecab = Mecab()
 tokens = mecab.morphs('right clavicular head가 돌출되어 있고 세게 만지면 아프다.')
